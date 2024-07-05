@@ -2,9 +2,8 @@ package configuration
 
 import (
 	"fmt"
-	"github.com/sam-caldwell/monorepo/go/exit/errors"
-	"github.com/sam-caldwell/monorepo/go/fs/file"
-	"github.com/sam-caldwell/monorepo/go/misc/words"
+	"github.com/sam-caldwell/errors"
+	"github.com/sam-caldwell/file"
 	"strings"
 )
 
@@ -20,7 +19,7 @@ func (em *EncryptedMap) Write() (err error) {
 	}
 	em.lock.Lock()
 	defer em.lock.Unlock()
-	if strings.TrimSpace(em.fileName) == words.EmptyString {
+	if strings.TrimSpace(em.fileName) == "" {
 		return fmt.Errorf(errors.NotInitialized)
 	}
 	var configFile file.File

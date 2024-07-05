@@ -2,7 +2,7 @@ package configuration
 
 import (
 	"fmt"
-	"github.com/sam-caldwell/monorepo/go/exit/errors"
+	"github.com/sam-caldwell/errors"
 )
 
 // ExpectOrPanic - Lookup a given key and return the value or panic.
