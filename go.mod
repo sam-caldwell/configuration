@@ -4,7 +4,7 @@ go 1.22.4
 
 require (
 	github.com/ProtonMail/gopenpgp/v2 v2.7.5
-	github.com/sam-caldwell/errors v1.0.2
+	github.com/sam-caldwell/errors v1.0.6
 	github.com/sam-caldwell/file v1.0.0
 )
 
